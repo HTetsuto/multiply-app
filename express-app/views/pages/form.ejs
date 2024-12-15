@@ -1,0 +1,17 @@
+<!-- form.ejs -->
+<form action="/form" method="POST">
+    <div>
+      <label for="x">x:</label>
+      <input type="number" id="x" name="x" required>
+    </div>
+    <div>
+      <label for="y">y:</label>
+      <input type="number" id="y" name="y" required>
+    </div>
+    <button type="submit">Calculate</button>
+</form>
+
+<!-- 計算結果の表示（条件付き）-->
+<% if (typeof result !== 'undefined') { %>
+  <h1>Calculation Result: <%= result %></h1>
+<% } %>
